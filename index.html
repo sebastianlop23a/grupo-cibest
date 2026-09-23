@@ -85,22 +85,53 @@
 
             inset: 0;
 
-            width: 100%;
-
-            height: 100%;
-
             overflow: hidden;
 
-            opacity: .90;
+            opacity: .30;
 
             pointer-events: none;
 
         }
 
 
-        .welcome-waves svg {
+        .welcome-wave-group {
 
-            width: 120%;
+            position: absolute;
+
+            width: 430px;
+
+            height: 430px;
+
+            animation: organicWelcomeMovement 32s ease-in-out infinite alternate;
+
+        }
+
+
+        .welcome-wave-group.top-right {
+
+            top: -245px;
+
+            right: -115px;
+
+        }
+
+
+        .welcome-wave-group.bottom-left {
+
+            left: -135px;
+
+            bottom: -250px;
+
+            animation-duration: 38s;
+
+            animation-delay: -7s;
+
+        }
+
+
+        .welcome-wave-group svg {
+
+            width: 100%;
 
             height: 100%;
 
@@ -121,14 +152,14 @@
 
             transform-origin: center;
 
-            animation: moveWelcomeWave 12s ease-in-out infinite alternate;
+            animation: pulseWelcomeCircle 14s ease-in-out infinite alternate;
 
         }
 
 
         .welcome-wave.wave-two {
 
-            animation-duration: 16s;
+                animation-duration: 18s;
 
             animation-delay: -4s;
 
@@ -137,7 +168,7 @@
 
         .welcome-wave.wave-three {
 
-            animation-duration: 20s;
+                animation-duration: 22s;
 
             animation-delay: -8s;
 
@@ -638,7 +669,7 @@
 
             border-radius: 32px;
 
-            padding: 32px;
+            padding: 0;
 
             color: white; /* Texto dentro de la tarjeta visual */
 
@@ -664,6 +695,10 @@
 
             transition: .4s;
 
+            overflow: hidden;
+
+            text-decoration: none;
+
         }
 
 
@@ -672,6 +707,19 @@
             transform:
                 rotate(0deg)
                 translateY(-8px);
+
+        }
+
+
+        .visual-card img {
+
+            display: block;
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
 
         }
 
@@ -1005,24 +1053,35 @@
         }
 
 
-        @keyframes moveWelcomeWave {
+        @keyframes organicWelcomeMovement {
 
             0% {
-
-                transform: translateX(-5%) translateY(0) scale(1);
-
+                transform: translate(0, 0) rotate(-1deg) scale(1);
             }
 
-            50% {
+            35% {
+                transform: translate(5px, -4px) rotate(.5deg) scale(1.01);
+            }
 
-                transform: translateX(3%) translateY(-20px) scale(1.03);
-
+            70% {
+                transform: translate(-4px, 4px) rotate(-.5deg) scale(.995);
             }
 
             100% {
+                transform: translate(3px, 2px) rotate(1deg) scale(1.01);
+            }
 
-                transform: translateX(-2%) translateY(15px) scale(1);
+        }
 
+
+        @keyframes pulseWelcomeCircle {
+
+            from {
+                transform: scale(.995);
+            }
+
+            to {
+                transform: scale(1.015);
             }
 
         }
@@ -1112,6 +1171,32 @@
 
         @media(max-width: 500px) {
 
+            .welcome-wave-group {
+
+                width: 300px;
+
+                height: 300px;
+
+            }
+
+
+            .welcome-wave-group.top-right {
+
+                top: -170px;
+
+                right: -90px;
+
+            }
+
+
+            .welcome-wave-group.bottom-left {
+
+                left: -105px;
+
+                bottom: -175px;
+
+            }
+
             .welcome-title {
 
                 letter-spacing: -2px;
@@ -1194,24 +1279,99 @@
 
         <div class="welcome-waves" aria-hidden="true">
 
-            <svg viewBox="0 0 1440 800" preserveAspectRatio="none">
+            <div class="welcome-wave-group top-right">
 
-                <path
-                    class="welcome-wave"
-                    d="M-100,500 C200,300 350,700 600,450 C850,200 1000,600 1550,300"
-                />
+                <svg viewBox="0 0 500 500">
 
-                <path
-                    class="welcome-wave wave-two"
-                    d="M-100,650 C250,450 400,750 650,500 C900,250 1100,700 1550,400"
-                />
+                    <path
+                        class="welcome-wave organic-wave-one"
+                        d="M250 110 C330 105 390 155 385 245 C400 330 320 390 250 380 C165 390 105 330 115 250 C100 165 170 105 250 110 Z"
+                    >
+                        <animate
+                            attributeName="d"
+                            dur="13s"
+                            repeatCount="indefinite"
+                            values="M250 110 C330 105 390 155 385 245 C400 330 320 390 250 380 C165 390 105 330 115 250 C100 165 170 105 250 110 Z;M250 115 C320 95 400 170 375 245 C395 320 330 400 250 375 C180 395 95 325 120 250 C105 180 180 100 250 115 Z;M250 110 C330 105 390 155 385 245 C400 330 320 390 250 380 C165 390 105 330 115 250 C100 165 170 105 250 110 Z"
+                        />
+                    </path>
 
-                <path
-                    class="welcome-wave wave-three"
-                    d="M-100,350 C200,150 450,500 700,300 C950,100 1150,450 1550,200"
-                />
+                    <path
+                        class="welcome-wave organic-wave-two"
+                        d="M250 60 C365 55 445 140 425 250 C440 355 355 445 250 425 C140 445 55 355 75 250 C55 145 145 55 250 60 Z"
+                    >
+                        <animate
+                            attributeName="d"
+                            dur="17s"
+                            begin="-6s"
+                            repeatCount="indefinite"
+                            values="M250 60 C365 55 445 140 425 250 C440 355 355 445 250 425 C140 445 55 355 75 250 C55 145 145 55 250 60 Z;M250 70 C350 45 455 155 415 250 C450 350 350 455 250 415 C150 450 45 350 85 250 C50 150 150 45 250 70 Z;M250 60 C365 55 445 140 425 250 C440 355 355 445 250 425 C140 445 55 355 75 250 C55 145 145 55 250 60 Z"
+                        />
+                    </path>
 
-            </svg>
+                    <path
+                        class="welcome-wave organic-wave-three"
+                        d="M250 10 C390 0 495 110 475 250 C500 390 390 500 250 475 C110 500 0 390 25 250 C0 110 110 0 250 10 Z"
+                    >
+                        <animate
+                            attributeName="d"
+                            dur="21s"
+                            begin="-10s"
+                            repeatCount="indefinite"
+                            values="M250 10 C390 0 495 110 475 250 C500 390 390 500 250 475 C110 500 0 390 25 250 C0 110 110 0 250 10 Z;M250 20 C380 -5 505 120 465 250 C510 380 380 505 250 465 C120 510 -5 380 35 250 C-5 120 120 -5 250 20 Z;M250 10 C390 0 495 110 475 250 C500 390 390 500 250 475 C110 500 0 390 25 250 C0 110 110 0 250 10 Z"
+                        />
+                    </path>
+
+                </svg>
+
+            </div>
+
+
+            <div class="welcome-wave-group bottom-left">
+
+                <svg viewBox="0 0 500 500">
+
+                    <path
+                        class="welcome-wave organic-wave-one"
+                        d="M250 110 C330 105 390 155 385 245 C400 330 320 390 250 380 C165 390 105 330 115 250 C100 165 170 105 250 110 Z"
+                    >
+                        <animate
+                            attributeName="d"
+                            dur="15s"
+                            begin="-4s"
+                            repeatCount="indefinite"
+                            values="M250 110 C330 105 390 155 385 245 C400 330 320 390 250 380 C165 390 105 330 115 250 C100 165 170 105 250 110 Z;M250 115 C320 95 400 170 375 245 C395 320 330 400 250 375 C180 395 95 325 120 250 C105 180 180 100 250 115 Z;M250 110 C330 105 390 155 385 245 C400 330 320 390 250 380 C165 390 105 330 115 250 C100 165 170 105 250 110 Z"
+                        />
+                    </path>
+
+                    <path
+                        class="welcome-wave organic-wave-two"
+                        d="M250 60 C365 55 445 140 425 250 C440 355 355 445 250 425 C140 445 55 355 75 250 C55 145 145 55 250 60 Z"
+                    >
+                        <animate
+                            attributeName="d"
+                            dur="19s"
+                            begin="-11s"
+                            repeatCount="indefinite"
+                            values="M250 60 C365 55 445 140 425 250 C440 355 355 445 250 425 C140 445 55 355 75 250 C55 145 145 55 250 60 Z;M250 70 C350 45 455 155 415 250 C450 350 350 455 250 415 C150 450 45 350 85 250 C50 150 150 45 250 70 Z;M250 60 C365 55 445 140 425 250 C440 355 355 445 250 425 C140 445 55 355 75 250 C55 145 145 55 250 60 Z"
+                        />
+                    </path>
+
+                    <path
+                        class="welcome-wave organic-wave-three"
+                        d="M250 10 C390 0 495 110 475 250 C500 390 390 500 250 475 C110 500 0 390 25 250 C0 110 110 0 250 10 Z"
+                    >
+                        <animate
+                            attributeName="d"
+                            dur="23s"
+                            begin="-15s"
+                            repeatCount="indefinite"
+                            values="M250 10 C390 0 495 110 475 250 C500 390 390 500 250 475 C110 500 0 390 25 250 C0 110 110 0 250 10 Z;M250 20 C380 -5 505 120 465 250 C510 380 380 505 250 465 C120 510 -5 380 35 250 C-5 120 120 -5 250 20 Z;M250 10 C390 0 495 110 475 250 C500 390 390 500 250 475 C110 500 0 390 25 250 C0 110 110 0 250 10 Z"
+                        />
+                    </path>
+
+                </svg>
+
+            </div>
 
         </div>
 
@@ -1412,38 +1572,21 @@
 
             <!-- TARJETA VISUAL -->
 
-            <div class="visual-card">
+            <a
+                class="visual-card"
+                href="https://avista.co/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visitar el sitio web de Avista"
+            >
+
+                <img
+                    src="https://avista.co/wp-content/uploads/2026/09/carrusel-paso-3.png"
+                    alt="Pieza de campaña Avista"
+                >
 
 
-                <div class="visual-top">
-
-                    <strong>
-                        avista
-                    </strong>
-
-                    <span>
-                        Grupo Cibest
-                    </span>
-
-                </div>
-
-
-                <div class="visual-main">
-
-                    Una nueva forma
-                    de avanzar.
-
-                </div>
-
-
-                <div class="visual-bottom">
-
-                    Una experiencia pensada para ti.
-
-                </div>
-
-
-            </div>
+            </a>
 
         </section>
 
