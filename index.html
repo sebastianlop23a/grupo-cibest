@@ -35,9 +35,9 @@
                 Helvetica,
                 sans-serif;
 
-            background: #f5f5f5;
+            background: #f5f5f5; /* Fondo general de la página */
 
-            color: #171717;
+            color: #575756; /* Color general del texto: Pantone Cool Gray 11 C */
 
             overflow-x: hidden;
         }
@@ -58,9 +58,9 @@
 
             z-index: 1000;
 
-            background: #0a0a0a;
+            background: white; /* Fondo de la pantalla de bienvenida */
 
-            color: white;
+            color: #575756; /* Texto principal: Pantone Cool Gray 11 C */
 
             display: flex;
 
@@ -91,7 +91,7 @@
 
             overflow: hidden;
 
-            opacity: .35;
+            opacity: .90;
 
             pointer-events: none;
 
@@ -111,7 +111,7 @@
 
             fill: none;
 
-            stroke: white;
+            stroke: #E50071; /* Color de las ondas: Pantone 213 C */
 
             stroke-width: 2;
 
@@ -145,6 +145,10 @@
 
 
         .welcome-content {
+
+            position: relative;
+
+            z-index: 2;
 
             width: 90%;
 
@@ -195,7 +199,7 @@
 
         .welcome-title span {
 
-            color: #8f8f8f;
+            color: #E50071; /* Texto destacado: Pantone 213 C */
 
         }
 
@@ -204,9 +208,9 @@
 
         .welcome-button {
 
-            background: white;
+            background: #E50071; /* Fondo del botón: Pantone 213 C */
 
-            color: #171717;
+            color: white; /* Texto del botón de bienvenida */
 
             border: none;
 
@@ -236,7 +240,7 @@
 
             box-shadow:
                 0 15px 35px
-                rgba(0,0,0,.35);
+                rgba(0,0,0,.35); /* Sombra del botón de bienvenida */
 
         }
 
@@ -293,10 +297,10 @@
 
             height: 82px;
 
-            background: white;
+            background: white; /* Fondo del encabezado */
 
             border-bottom:
-                1px solid #eaeaea;
+                1px solid #eaeaea; /* Línea inferior del encabezado */
 
             display: flex;
 
@@ -344,7 +348,7 @@
 
             height: 27px;
 
-            background: #d0d0d0;
+            background: #E50071; /* Línea divisoria de las marcas: Pantone 213 C */
 
         }
 
@@ -353,36 +357,7 @@
 
             font-size: 14px;
 
-            color: #666;
-
-        }
-
-
-        nav {
-
-            display: flex;
-
-            gap: 30px;
-
-        }
-
-
-        nav a {
-
-            color: #444;
-
-            text-decoration: none;
-
-            font-size: 14px;
-
-            transition: .2s;
-
-        }
-
-
-        nav a:hover {
-
-            color: #000;
+            color: #666; /* Texto de Grupo Cibest */
 
         }
 
@@ -395,7 +370,7 @@
 
             min-height: 570px;
 
-            background: white;
+            background: white; /* Fondo de la sección Grupo Cibest */
 
             display: flex;
 
@@ -409,7 +384,7 @@
                 90px 25px;
 
             border-bottom:
-                1px solid #eeeeee;
+                1px solid #eeeeee; /* Separador de la sección */
 
         }
 
@@ -427,7 +402,7 @@
 
             letter-spacing: 3px;
 
-            color: #888;
+            color: #E50071; /* Etiqueta superior: Pantone 213 C */
 
             margin-bottom: 28px;
 
@@ -454,7 +429,7 @@
 
         .grupo-title span {
 
-            color: #777;
+            color: #E50071; /* Palabra destacada: Pantone 213 C */
 
         }
 
@@ -465,7 +440,7 @@
 
             margin: auto;
 
-            color: #666;
+            color: #666; /* Descripción de Grupo Cibest */
 
             font-size: 18px;
 
@@ -504,7 +479,7 @@
 
             font-size: 27px;
 
-            color: #aaa;
+            color: #aaa; /* Signo más entre las marcas */
 
         }
 
@@ -515,7 +490,7 @@
 
             font-size: 12px;
 
-            color: #999;
+            color: #999; /* Subtítulo de las marcas */
 
             letter-spacing: 1px;
 
@@ -541,7 +516,7 @@
 
             gap: 60px;
 
-            background: #f5f5f5;
+            background: white; /* Fondo claro de la sección principal */
 
         }
 
@@ -557,7 +532,7 @@
 
             display: inline-block;
 
-            background: #e8e8e8;
+            background: #fce3ef; /* Fondo rosado suave de la etiqueta */
 
             padding:
                 9px 15px;
@@ -566,7 +541,7 @@
 
             font-size: 12px;
 
-            color: #555;
+            color: #E50071; /* Texto de la etiqueta: Pantone 213 C */
 
             margin-bottom: 25px;
 
@@ -593,7 +568,7 @@
 
         .hero-title span {
 
-            color: #777;
+            color: #E50071; /* Palabra destacada: Pantone 213 C */
 
         }
 
@@ -602,7 +577,7 @@
 
             font-size: 18px;
 
-            color: #666;
+            color: #666; /* Descripción del hero */
 
             line-height: 1.65;
 
@@ -615,9 +590,9 @@
 
         .primary-button {
 
-            background: #171717;
+            background: #E50071; /* Fondo del botón: Pantone 213 C */
 
-            color: white;
+            color: white; /* Texto del botón principal */
 
             border: none;
 
@@ -644,7 +619,7 @@
 
             box-shadow:
                 0 12px 30px
-                rgba(0,0,0,.2);
+                rgba(0,0,0,.2); /* Sombra del botón principal */
 
         }
 
@@ -665,13 +640,13 @@
 
             padding: 32px;
 
-            color: white;
+            color: white; /* Texto dentro de la tarjeta visual */
 
             background:
                 linear-gradient(
                     145deg,
-                    #181818,
-                    #555
+                    #E50071, /* Inicio: Pantone 213 C */
+                    #575756 /* Final: Pantone Cool Gray 11 C */
                 );
 
             display: flex;
@@ -682,7 +657,7 @@
 
             box-shadow:
                 0 30px 70px
-                rgba(0,0,0,.22);
+                rgba(0,0,0,.22); /* Sombra de la tarjeta visual */
 
             transform:
                 rotate(3deg);
@@ -744,7 +719,7 @@
             padding:
                 100px 8%;
 
-            background: white;
+            background: white; /* Fondo de la introducción */
 
             text-align: center;
 
@@ -773,7 +748,7 @@
 
             margin: auto;
 
-            color: #666;
+            color: #666; /* Texto de la introducción */
 
             font-size: 17px;
 
@@ -791,7 +766,7 @@
             padding:
                 100px 8%;
 
-            background: #f5f5f5;
+            background: #f7f7f7; /* Fondo claro de soluciones */
 
         }
 
@@ -821,7 +796,7 @@
 
         .section-header p {
 
-            color: #777;
+            color: #777; /* Texto introductorio de soluciones */
 
         }
 
@@ -847,14 +822,14 @@
 
         .card {
 
-            background: white;
+            background: white; /* Fondo de cada tarjeta */
 
             padding: 35px;
 
             border-radius: 22px;
 
             border:
-                1px solid #e9e9e9;
+                1px solid #f3b4d0; /* Borde rosado suave de cada tarjeta */
 
             transition: .3s;
 
@@ -868,7 +843,7 @@
 
             box-shadow:
                 0 20px 45px
-                rgba(0,0,0,.08);
+                rgba(0,0,0,.08); /* Sombra al pasar sobre una tarjeta */
 
         }
 
@@ -878,6 +853,19 @@
             font-size: 30px;
 
             margin-bottom: 22px;
+
+        }
+
+
+        .card-icon img {
+
+            display: block;
+
+            width: 52px;
+
+            height: 52px;
+
+            object-fit: contain;
 
         }
 
@@ -893,7 +881,7 @@
 
         .card p {
 
-            color: #777;
+            color: #777; /* Texto de cada tarjeta */
 
             line-height: 1.6;
 
@@ -911,9 +899,9 @@
             padding:
                 110px 25px;
 
-            background: #171717;
+            background: #E50071; /* Fondo CTA: Pantone 213 C */
 
-            color: white;
+            color: white; /* Texto principal de la llamada a la acción */
 
             text-align: center;
 
@@ -938,7 +926,7 @@
 
         .cta p {
 
-            color: #aaa;
+            color: white; /* Texto secundario de la llamada a la acción */
 
             font-size: 17px;
 
@@ -951,9 +939,9 @@
 
             border: none;
 
-            background: white;
+            background: white; /* Fondo del botón final */
 
-            color: #171717;
+            color: #575756; /* Texto del botón: Pantone Cool Gray 11 C */
 
             padding:
                 16px 30px;
@@ -976,9 +964,9 @@
             padding:
                 30px 8%;
 
-            background: #101010;
+            background: #575756; /* Fondo del pie: Pantone Cool Gray 11 C */
 
-            color: #777;
+            color: white; /* Texto del pie de página */
 
             display: flex;
 
@@ -1073,13 +1061,6 @@
 
                 padding:
                     0 5%;
-
-            }
-
-
-            nav {
-
-                display: none;
 
             }
 
@@ -1299,22 +1280,6 @@
 
             </div>
 
-
-            <nav>
-
-                <a href="#inicio">
-                    Inicio
-                </a>
-
-                <a href="#nosotros">
-                    Nosotros
-                </a>
-
-                <a href="#soluciones">
-                    Soluciones
-                </a>
-
-            </nav>
 
         </header>
 
@@ -1552,7 +1517,10 @@
                 <div class="card">
 
                     <div class="card-icon">
-                        💡
+                        <img
+                            src="https://avista.co/wp-content/uploads/2025/09/2Recurso-11.svg"
+                            alt="Ícono de soluciones"
+                        >
                     </div>
 
 
@@ -1580,7 +1548,10 @@
                 <div class="card">
 
                     <div class="card-icon">
-                        🚀
+                        <img
+                            src="https://avista.co/wp-content/uploads/2025/04/1Recurso-2.svg"
+                            alt="Ícono de nuevas oportunidades"
+                        >
                     </div>
 
 
@@ -1608,7 +1579,10 @@
                 <div class="card">
 
                     <div class="card-icon">
-                        🤝
+                        <img
+                            src="https://avista.co/wp-content/uploads/2024/11/1Recurso-136.svg"
+                            alt="Ícono de estamos contigo"
+                        >
                     </div>
 
 
